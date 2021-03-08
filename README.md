@@ -10,6 +10,7 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
   - [Step 2: Adding a Base Map](#step-2-adding-a-base-map)
   - [Step 3: Changing Projections](#step-3-changing-projections)
   - [Step 4: Adding a Georeferenced Historic Base Map](#step-4-adding-a-georeferenced-historic-base-map)
+  - [Step 5: How to Label Points](#step-5-how-to-label-points)
 
 ## Week 8: Basic Tech and Techniques for Digital Cartography
 Note: Before class, please download QGIS and Atom, as discussed below.
@@ -74,3 +75,21 @@ Things look good, but if you look at maps for a living, this map looks a little 
 
 ### Step 4: Adding a Georeferenced Historic Base Map
  Adding an historic base map to your project is a nice way to give your map historical context. Using GIS software, you can take any scanned map and "rubber sheet" it to your project in a painstaking process known as georeferencing. Essentially, this is a process of placing a series of pins on your scanned map and linking them to a series of matching pins in your map edit window. After you have done this, you can run a tool in GIS to assign coordinates to each pixel on your scanned map. Luckily, there are several online resources, like the [David Rumsey Map Collection](https://www.davidrumsey.com/), that provide scanned maps that are already georeferenced. I have downloaded and placed one of these maps in the "booth-poverty-map" folder.
+
+ Similar to how you added the csv data, click "Layer" in the bar at the top of the screen. Then, click "Add Layer" and "Add Raster Layer." This will open a form.
+
+ ![Adding a Raster Layer](images/Add-raster.png)  
+ **Figure 08**. How to add a raster layer.
+
+ In the form that opens, navigate to and select the file called "Booth_Descriptive_Map_of_London_Poverty_1889.tif" located in the repository you downloaded. Then, click "Add."
+
+ ![Add Raster Layer Form](images/Raster-form.png)  
+ **Figure 09**. The form for adding a raster layer.
+
+ After adding the georefenced raster, you should see Booth's 1889 map of London poverty in your map edit window. Again, make sure to drag this map beneath the points in the layers window. The result should look something like this:
+
+ ![Booth Map](images/Booth-map-in-QGIS.png)  
+ **Figure 10**. The Booth map in QGIS.
+
+### Step 5: How to Label Points
+Looking at the map in progress, you will see a bunch of points over an old map of London. It is kind of neat to zoom in and out on this map, but the points don't really mean anything without some legible data attached to them. We should probably add some labels to these undifferentiated points.
