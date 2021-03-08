@@ -7,6 +7,9 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
   - [Download QGIS Desktop Software](#download-qgis-desktop-software)
   - [Download Atom Text Editor](#download-atom-text-editor)
   - [Step 1: Download This Repository and Upload the Sherlock CSV to QGIS](#step-1-download-this-repository-and-upload-the-sherlock-csv-to-qgis)
+  - [Step 2: Adding a Base Map](#step-2-adding-a-base-map)
+  - [Step 3: Changing Projections](#step-3-changing-projections)
+  - [Step 4: Adding a Georeferenced Historic Base Map](#step-4-adding-a-georeferenced-historic-base-map)
 
 ## Week 8: Basic Tech and Techniques for Digital Cartography
 Note: Before class, please download QGIS and Atom, as discussed below.
@@ -55,7 +58,19 @@ This will open a form. In the box next to "File name," include the path to the c
 ![Add Delimited Text Layer Form](images/Upload-csv-2.png)  
 **Figure 05**. How to fill out the form to add a delimited text layer.
 
+### Step 2: Adding a Base Map
 After clicking add, you should see a collection of points on a white background in your map edit window. Not being sure if these points are actually in London, we need a base map for visual verification. You can add one by clicking "XYZ Tiles" in the browser window at the top left corner. Select "OpenStreetMap" and drag and drop this into your map window. Next, in the layers window, make sure to drag the base map under the Sherlock points.
 
 ![Add Base Map](images/points-over-base.png)  
 **Figure 06**. Add a base map and place it beneath the points.
+
+### Step 3: Changing Projections
+Things look good, but if you look at maps for a living, this map looks a little squished. This illustrates the importance of projections. Every map is an abstraction of the Earth's natural curvature to a flat surface, so some projections are better than others for particular locations. In this case, it would be good to use a projection developed specifically for London, such as EPSG:102400 (London Survey Grid). In the bottom right corner of your window, you should see a little button that looks like a globe wearing a hat, followed by an EPSG code. This is where you can change your projection. Click on this and, in the form that opens, type "102400" into the "Filter" box. You should now see "London_Survey_Grid" appear in the box beneath "Predefined Coordinate Reference Systems." Click it and then click "OK." After you change the projection, your map should be a little easier on the eyes.
+
+![Change Projection](images/change-projection.png)  
+**Figure 07**. How to change the projection.
+
+ GIS users are trained to think of mappable data in two main categories - vector and raster. Vector data consist of distinct points, lines, and polygons. The spreadsheet data that you have mapped is one example of vector data. In contrast, raster data consist of continuous pixels. A scanned map is an example of raster data. We are now going to add some new raster data to our map.
+
+### Step 4: Adding a Georeferenced Historic Base Map
+ Adding an historic base map to your project is a nice way to give your map historical context. Using GIS software, you can take any scanned map and "rubber sheet" it to your project in a painstaking process known as georeferencing. Essentially, this is a process of placing a series of pins on your scanned map and linking them to a series of matching pins in your map edit window. After you have done this, you can run a tool in GIS to assign coordinates to each pixel on your scanned map. Luckily, there are several online resources, like the [David Rumsey Map Collection](https://www.davidrumsey.com/), that provide scanned maps that are already georeferenced. I have downloaded and placed one of these maps in the "booth-poverty-map" folder.
