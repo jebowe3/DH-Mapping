@@ -49,3 +49,13 @@ Upon opening QGIS, you should notice a dropdown option called "Layer" in the bar
 
 ![Adding Spreadsheet Data to QGIS](images/Upload-csv-1.png)  
 **Figure 04**. Option to add a spreadsheet in QGIS.
+
+This will open a form. In the box next to "File name," include the path to the csv file. You can navigate to it by pressing the button with three dots to the right of this box. After doing so, the rest of this form should complete automatically. If not, make sure to select "CSV" under "File Format," click "Point coordinates" under "Geometry Definition," select "X" for "X field" and "Y" for "Y field," and make sure that "Geometry CRS" is set to "EPSG:4326 - WGS 84." Then, click "Add." The form should appear as follows.
+
+![Add Delimited Text Layer Form](images/Upload-csv-2.png)  
+**Figure 05**. How to fill out the form to add a delimited text layer.
+
+After clicking add, you should see a collection of points on a white background in your map edit window. Not being sure if these points are actually in London, we need a base map for visual verification. You can add one by clicking "XYZ Tiles" in the browser window at the top left corner. Select "OpenStreetMap" and drag and drop this into your map window. Next, in the layers window, make sure to drag the base map under the Sherlock points.
+
+![Add Base Map](images/points-over-base.png)  
+**Figure 06**. Add a base map and place it beneath the points.
