@@ -10,7 +10,7 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
   - [Step 2: Adding a Base Map](#step-2-adding-a-base-map)
   - [Step 3: Changing Projections](#step-3-changing-projections)
   - [Step 4: Adding a Georeferenced Historic Base Map](#step-4-adding-a-georeferenced-historic-base-map)
-  - [Step 5: How to Label Points](#step-5-how-to-label-points)
+  - [Step 5: How to Label Points and Change Symbology](#step-5-how-to-label-points-and-change-symbology)
 
 ## Week 8: Basic Tech and Techniques for Digital Cartography
 Note: Before class, please download QGIS and Atom, as discussed below.
@@ -91,7 +91,7 @@ After adding the georefenced raster, you should see Booth's 1889 map of London p
 ![Booth Map](images/Booth-map-in-QGIS.png)  
 **Figure 10**. The Booth map in QGIS.
 
-### Step 5: How to Label Points
+### Step 5: How to Label Points and Change Symbology
 Looking at the map in progress, you will see a bunch of points over an old map of London. It is kind of neat to zoom in and out on this map, but the points don't really mean anything without some legible data attached to them. We should probably add some labels to these undifferentiated points.
 
 First, right click over the points layer in the table of contents and select "Properties."
@@ -103,3 +103,8 @@ Then, select "Labels" and, in the form that opens, make sure that you select "Si
 
 ![Label Form](images/Labels.png)  
 **Figure 12**. Label form options.
+
+Now that you have labeled the points, let's edit the appearance of the points. Go back the properties options for the layer and, instead of "Labels," choose "Symbology." Fill out the form as follows, choosing "diamond red" and clicking "OK."
+
+![Change Symbology](images/diamond-red.png)  
+**Figure 13**. How to change symbology.
