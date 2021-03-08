@@ -74,22 +74,32 @@ Things look good, but if you look at maps for a living, this map looks a little 
  GIS users are trained to think of mappable data in two main categories - vector and raster. Vector data consist of distinct points, lines, and polygons. The spreadsheet data that you have mapped is one example of vector data. In contrast, raster data consist of continuous pixels. A scanned map is an example of raster data. We are now going to add some new raster data to our map.
 
 ### Step 4: Adding a Georeferenced Historic Base Map
- Adding an historic base map to your project is a nice way to give your map historical context. Using GIS software, you can take any scanned map and "rubber sheet" it to your project in a painstaking process known as georeferencing. Essentially, this is a process of placing a series of pins on your scanned map and linking them to a series of matching pins in your map edit window. After you have done this, you can run a tool in GIS to assign coordinates to each pixel on your scanned map. Luckily, there are several online resources, like the [David Rumsey Map Collection](https://www.davidrumsey.com/), that provide scanned maps that are already georeferenced. I have downloaded and placed one of these maps in the "booth-poverty-map" folder.
+Adding an historic base map to your project is a nice way to give your map historical context. Using GIS software, you can take any scanned map and "rubber sheet" it to your project in a painstaking process known as georeferencing. Essentially, this is a process of placing a series of pins on your scanned map and linking them to a series of matching pins in your map edit window. After you have done this, you can run a tool in GIS to assign coordinates to each pixel on your scanned map. Luckily, there are several online resources, like the [David Rumsey Map Collection](https://www.davidrumsey.com/), that provide scanned maps that are already georeferenced. I have downloaded and placed one of these maps in the "booth-poverty-map" folder.
 
- Similar to how you added the csv data, click "Layer" in the bar at the top of the screen. Then, click "Add Layer" and "Add Raster Layer." This will open a form.
+Similar to how you added the csv data, click "Layer" in the bar at the top of the screen. Then, click "Add Layer" and "Add Raster Layer." This will open a form.
 
- ![Adding a Raster Layer](images/Add-raster.png)  
- **Figure 08**. How to add a raster layer.
+![Adding a Raster Layer](images/Add-raster.png)  
+**Figure 08**. How to add a raster layer.
 
- In the form that opens, navigate to and select the file called "Booth_Descriptive_Map_of_London_Poverty_1889.tif" located in the repository you downloaded. Then, click "Add."
+In the form that opens, navigate to and select the file called "Booth_Descriptive_Map_of_London_Poverty_1889.tif" located in the repository you downloaded. Then, click "Add."
 
- ![Add Raster Layer Form](images/Raster-form.png)  
- **Figure 09**. The form for adding a raster layer.
+![Add Raster Layer Form](images/Raster-form.png)  
+**Figure 09**. The form for adding a raster layer.
 
- After adding the georefenced raster, you should see Booth's 1889 map of London poverty in your map edit window. Again, make sure to drag this map beneath the points in the layers window. The result should look something like this:
+After adding the georefenced raster, you should see Booth's 1889 map of London poverty in your map edit window. Again, make sure to drag this map beneath the points in the layers window. The result should look something like this:
 
- ![Booth Map](images/Booth-map-in-QGIS.png)  
- **Figure 10**. The Booth map in QGIS.
+![Booth Map](images/Booth-map-in-QGIS.png)  
+**Figure 10**. The Booth map in QGIS.
 
 ### Step 5: How to Label Points
 Looking at the map in progress, you will see a bunch of points over an old map of London. It is kind of neat to zoom in and out on this map, but the points don't really mean anything without some legible data attached to them. We should probably add some labels to these undifferentiated points.
+
+First, right click over the points layer in the table of contents and select "Properties."
+
+![Layer Properties](images/Layer-properties.png)  
+**Figure 11**. Editing layer properties.
+
+Then, select "Labels" and, in the form that opens, make sure that you select "Single labels", use "place" for "Value," "Bodoni 72 Oldstyle" for "Font," "Bold" for "Style," "12" for "Size," and click "OK." The form should be filled as follows:
+
+![Label Form](images/Labels.png)  
+**Figure 12**. Label form options.
