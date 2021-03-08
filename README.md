@@ -35,4 +35,8 @@ A good text editor is a must for any code-intensive web cartography. Atom descri
 
 Building a web map from scratch requires some familiarity with coding in HTML, CSS, and JavaScript. In this class, we will take a look at what these are doing to make our web map work, but you will not be expected to write or implement any code. If you are interested in taking a deeper dive into this, let me know and I can point you in the direction of some good classes or work through the basics with you.
 
-### Step 1: Download This Repository and Upload the Sherlock CSV to QGIS
+### Step 1: Download this Repository and Upload the Sherlock CSV to QGIS
+Before opening QGIS, you should download this repository and save it to your desktop so that you can work with the files included here. Towards the top of this page, you should see a green button that says, "Code." Click this and select "Download ZIP" from the options as shown in the image below.
+
+![Downloading Repo](images/Repo-download.png)  
+**Figure 03**. How to download this repository.
