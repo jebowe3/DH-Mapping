@@ -228,3 +228,8 @@ $.when(
   // more JavaScript here
 });
 ```
+
+Now, save your edits to the index.html file and refresh your web map in atom-live-server. You should notice a lot of blue markers now appear. Hover over them and you will see detailed descriptions of each points. Also notice that there is a filter button under the zoom control in the top left corner. If you click on this, you will see that you can filter the points by story name.
+
+![Finished Live Server Map](images/web-map-finished.png)  
+**Figure 28**. The finished web map in atom-live-server.
