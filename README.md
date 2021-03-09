@@ -181,3 +181,6 @@ Return to the map edit window and right click the layer with all of the points (
 
 ![Export Sherlock Points](images/export-sherlock-points.png)  
 **Figure 24**. Export all of the Sherlock points.
+
+### Step 2: Add the Sherlock GeoJSON to a Web Map Using Atom
+Now we are ready to open our "leaflet-map" folder and do some minor editing in Atom.
