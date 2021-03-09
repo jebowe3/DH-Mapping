@@ -6,12 +6,16 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
 - [Week 8: Basic Tech and Techniques for Digital Cartography](#week-8-basic-tech-and-techniques-for-digital-cartography)
   - [Download QGIS Desktop Software](#download-qgis-desktop-software)
   - [Download Atom Text Editor](#download-atom-text-editor)
+- [Static Mapping with QGIS](#static-mapping-with-qgis)
   - [Step 1: Download This Repository and Upload the Sherlock CSV to QGIS](#step-1-download-this-repository-and-upload-the-sherlock-csv-to-qgis)
   - [Step 2: Adding a Base Map](#step-2-adding-a-base-map)
   - [Step 3: Changing Projections](#step-3-changing-projections)
   - [Step 4: Adding a Georeferenced Historic Base Map](#step-4-adding-a-georeferenced-historic-base-map)
   - [Step 5: How to Label Points and Change Symbology](#step-5-how-to-label-points-and-change-symbology)
   - [Step 6: Creating a New Layer from a Selection](#step-6-creating-a-new-layer-from-a-selection)
+  - [Step 7: How to Make a Static Map](#step-7-how-to-make-a-static-map)
+- [Web Mapping with Leaflet JavaScript](#web-mapping-with-leaflet-javascript)
+  - [Step 1: Export a GeoJSON File for Web Mapping](#step-1-export-a-geojson-file-for-web-mapping)
 
 ## Week 8: Basic Tech and Techniques for Digital Cartography
 Note: Before class, please download QGIS and Atom, as discussed below.
@@ -39,6 +43,8 @@ A good text editor is a must for any code-intensive web cartography. Atom descri
 **Figure 02**. Download Atom.
 
 Building a web map from scratch requires some familiarity with coding in HTML, CSS, and JavaScript. In this class, we will take a look at what these are doing to make our web map work, but you will not be expected to write or implement any code. If you are interested in taking a deeper dive into this, let me know and I can point you in the direction of some good classes or work through the basics with you.
+
+## Static Mapping with QGIS
 
 ### Step 1: Download this Repository and Upload the Sherlock CSV to QGIS
 Before opening QGIS, you should download this repository and save it to your desktop so that you can work with the files included here. Towards the top of this page, you should see a green button that says, "Code." Click this and select "Download ZIP" from the options as shown in the image below.
@@ -132,3 +138,46 @@ Now, uncheck the original points layer in your table of contents so that you onl
 
 ![Noble Bachelor Points](images/noble-bachelor-points.png)  
 **Figure 17**. The Noble Bachelor points in a map edit session.
+
+### Step 7: How to Make a Static Map
+Now we are ready to make the map. In the edit window, make sure you are zoomed in on the Noble Bachelor points and that all labels are legible. Now, from the options in the bar at the top, choose "Project" and "New Print Layout" or simple hold the command key and press "P" to open a print layout session. A box will appear prompting you to add a print layout title. Let's call this "Noble_Bachelor_Map."
+
+In the print layout screen that opens, you will want to click the button on the lefthand bar that "adds a new label to the layout." This will allow you to add a title to the map.
+
+![Adding a Label](images/add-label.png)  
+**Figure 18**. The add new label button.
+
+Next, drag your cursor to make a box for the title across the top. In the item properties box to the right, type "Points of Interest from The Adventure of the Noble Bachelor" in the box, replacing the placeholder text. Then, change the font size to 25 pt and make sure your title box is big enough to display the full title.
+
+![Adding a Title](images/add-title.png)  
+**Figure 19**. Adding a title.
+
+Next, you will need to click the "adds a new map to the layout button" as shown below.
+
+![Adding a New Map Button](images/add-map.png)  
+**Figure 20**. The adds a new map to the layout button.
+
+Just as you did with the title, drag the cursor across the page to add the map. You can move and resize this after you add it. The result should look something like this:
+
+![Map Added](images/map-added.png)  
+**Figure 21**. The map added to the print layout.
+
+Using a similar process, see if you can add and style a north arrow in the bottom right corner and a scale bar in the bottom left corner so that your map looks like this:
+
+![Finished Map Layout](images/finished-map-layout.png)  
+**Figure 22**. The finished map layout.
+
+Now, your map is ready to export to a printable pdf. At the top of the layout edit window, you will find a button called "Export as PDF." Click this and save your map inside your project folder. Congratulations! You have created a printable static map.
+
+![Export PDF](images/export-pdf.png)  
+**Figure 23**. Export a PDF.
+
+## Web Mapping with Leaflet JavaScript
+
+### Step 1: Export a GeoJSON File for Web Mapping
+The results are okay, but in the 21st Century, we can do better. Let's take a look at how web mapping with our point data can expand the amount of data we can map and deliver the map user a better and more rewarding interactive experience. The first thing we need to do is to export a new GeoJSON file with all of our Sherlock points.
+
+Return to the map edit window and right click the layer with all of the points (not just the Noble Bachelor points) and click "Export" and "Save Features As." Again, make sure you export in GeoJSON format. Click the three dots next to "File name," save as "sherlock_points," and make sure to save the file inside the "data" folder within the "leaflet-map" folder inside the repository that you downloaded to your desktop. Finally, set coordinate precision to 5 decimal points. You could go with the default 15, but that level of coordinate precision is generally unnecessary and simply makes for heavier files.
+
+![Export Sherlock Points](images/export-sherlock-points.png)  
+**Figure 24**. Export all of the Sherlock points.
