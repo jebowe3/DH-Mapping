@@ -203,3 +203,28 @@ Now you can check the progress of edits to your web map with a locally hosted se
 The map should look like the image above. You will notice that one interactive feature is already on the map. In the top right corner, there is a slider control that changes the opacity value of the historic base map tiles so that you can see the contemporary map of London underneath. Already, we can see how the web map offers a little more to the experience of the map user.
 
 ### Step 3: Add the Sherlock GeoJSON to a Web Map Using Atom
+You'll notice that there are no points on the map. That is because we have not directed the JavaScript within the index.html file to the GeoJSON file holding the points. Remember that the local path to the Sherlock points is 'data/sherlock_points.geojson' and that we will need to add this path to the index.html file. Scroll through the index.html file until you see the following lines of JavaScript:
+
+```js
+// use jquery to load GeoJSON data
+$.when(
+  $.getJSON(/* 'ADD PATH TO GEOJSON DATA HERE' */)
+  // when the files are done loading,
+  // identify them with names and process them through a function
+).done(function(sherlockPts) {
+  // more JavaScript here
+});
+```
+
+Replace /* 'ADD PATH TO GEOJSON DATA HERE' */ with 'data/sherlock_points.geojson' so that those lines of JavaScript now look like this:
+
+```js
+// use jquery to load GeoJSON data
+$.when(
+  $.getJSON('data/sherlock_points.geojson')
+  // when the files are done loading,
+  // identify them with names and process them through a function
+).done(function(sherlockPts) {
+  // more JavaScript here
+});
+```
