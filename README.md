@@ -11,6 +11,7 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
   - [Step 3: Changing Projections](#step-3-changing-projections)
   - [Step 4: Adding a Georeferenced Historic Base Map](#step-4-adding-a-georeferenced-historic-base-map)
   - [Step 5: How to Label Points and Change Symbology](#step-5-how-to-label-points-and-change-symbology)
+  - [Step 6: Creating a New Layer from a Selection](#step-6-creating-a-new-layer-from-a-selection)
 
 ## Week 8: Basic Tech and Techniques for Digital Cartography
 Note: Before class, please download QGIS and Atom, as discussed below.
@@ -108,3 +109,26 @@ Now that you have labeled the points, let's edit the appearance of the points. G
 
 ![Change Symbology](images/diamond-red.png)  
 **Figure 13**. How to change symbology.
+
+After returning to the map, behold the clutter! This is one of the drawbacks of static mapping with this type of data. There is just way too much on the map and no good way to filter it. This being said, we are going to extract points for a single story for a more legible map. "The Adventure of the Noble Bachelor" sounds exciting enough, so let's select that.
+
+### Step 6: Creating a New Layer from a Selection
+Again, right click on the points layer in the table of contents and choose "Open Attribute Table." At the top of the attribute table, click the button for the "Select features using an expression" tool. In the expression box, type "story" = 'The Adventure of the Noble Bachelor' and click "Select Features" in the bottom right corner.
+
+![Select by Expression](images/select-by-expression.png)  
+**Figure 14**. Selecting features by an expression.
+
+After closing the attribute table and returning to the map edit window, you should see a few points highlighted in yellow. You can save these selected points as a new layer by right clicking the points layer once again, choosing "Export," and by clicking "Save Selected Features As."
+
+![Saving Selected Features](images/export-selected-features.png)  
+**Figure 15**. Saving selected features.
+
+In the form that follows, set the format to "GeoJSON" and call the file "noble_bachelor_points.geojson" (making sure you have no spaces in your file names is necessary for successful coding) and save this in the root of the repository that you saved to your desktop. Next, set the CRS to "EPSG:4326 - WGS 84" and set your coordinate precision to 5 decimal points. Make sure that you check the box next to "Add saved file to map" and click "OK."
+
+![Export Form](images/save-selected-form.png)  
+**Figure 16**. Filling out the export features form.
+
+Now, uncheck the original points layer in your table of contents so that you only see the Noble Bachelor points in your map edit window and zoom into these points. Again, using the methods outlined above, change the properties of this layer so that the points appear as diamonds and feature single labels. As a challenge, try making these diamond markers green. Also, in addition to making the labels Bold 12 pt Bodoni 72 Oldstyle, add a 1 mm white buffer around the text to make it more visible on the map. The result should look like this:
+
+![Noble Bachelor Points](images/noble-bachelor-points.png)  
+**Figure 17**. The Noble Bachelor points in a map edit session.
