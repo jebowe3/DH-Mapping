@@ -17,7 +17,7 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
 - [Web Mapping with Leaflet JavaScript](#web-mapping-with-leaflet-javascript)
   - [Step 1: Export a GeoJSON File for Web Mapping](#step-1-export-a-geojson-file-for-web-mapping)
   - [Step 2: Download Atom-Live-Server Package](#step-2-download-atom-live-server-package)
-  - [Step 3: Add the Sherlock GeoJSON to a Web Map Using Atom](#step-2-add-the-sherlock-geojson-to-a-web-map-using-atom)
+  - [Step 3: Add the Sherlock GeoJSON to a Web Map Using Atom](#step-3-add-the-sherlock-geojson-to-a-web-map-using-atom)
 
 ## Week 8: Basic Tech and Techniques for Digital Cartography
 Note: Before class, please download QGIS and Atom, as discussed below.
