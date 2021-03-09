@@ -16,6 +16,7 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
   - [Step 7: How to Make a Static Map](#step-7-how-to-make-a-static-map)
 - [Web Mapping with Leaflet JavaScript](#web-mapping-with-leaflet-javascript)
   - [Step 1: Export a GeoJSON File for Web Mapping](#step-1-export-a-geojson-file-for-web-mapping)
+  - [Step 2: Add the Sherlock GeoJSON to a Web Map Using Atom](#step-2-add-the-sherlock-geojson-to-a-web-map-using-atom)
 
 ## Week 8: Basic Tech and Techniques for Digital Cartography
 Note: Before class, please download QGIS and Atom, as discussed below.
@@ -183,4 +184,4 @@ Return to the map edit window and right click the layer with all of the points (
 **Figure 24**. Export all of the Sherlock points.
 
 ### Step 2: Add the Sherlock GeoJSON to a Web Map Using Atom
-Now we are ready to open our "leaflet-map" folder and do some minor editing in Atom.
+Now we are ready to open our "leaflet-map" folder and do some minor editing in Atom. Open the repository that you downloaded to your desktop. Locate the folder called "leaflet-map." Drag and drop this entire folder over the green Atom icon on your desktop. This should open all of the web map components within an Atom text edit session.
