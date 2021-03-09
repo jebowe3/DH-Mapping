@@ -18,6 +18,7 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
   - [Step 1: Export a GeoJSON File for Web Mapping](#step-1-export-a-geojson-file-for-web-mapping)
   - [Step 2: Download Atom-Live-Server Package](#step-2-download-atom-live-server-package)
   - [Step 3: Add the Sherlock GeoJSON to a Web Map Using Atom](#step-3-add-the-sherlock-geojson-to-a-web-map-using-atom)
+  - [Step 4: Explanation of the Code Behind the Web Map](#step-4-explanation-of-the-code-behind-the-web-map)
 
 ## Week 8: Basic Tech and Techniques for Digital Cartography
 Note: Before class, please download QGIS and Atom, as discussed below.
@@ -233,3 +234,160 @@ Now, save your edits to the index.html file and refresh your web map in atom-liv
 
 ![Finished Live Server Map](images/web-map-finished.png)  
 **Figure 28**. The finished web map in atom-live-server.
+
+### Step 4: Explanation of the Code Behind the Web Map
+You may be wondering what the all of this code in the index.html file is doing. If not, feel free to skip this section, but if so, the following describes the main components of this code.
+
+First, at the top of the document, you will notice some links to different CSS libraries as well as some CSS code between the style tags. This code is what styles the map. By changing this, we can change things like the font sizes, header content, and page layout.
+
+Next, you will notice that we are calling in a few JavaScript libraries within script tags. The most important of these is the Leaflet JavaScript library ("https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"). The JavaScript is what allows you to manipulate and visualize the data presented in the map. Within this code, the following...
+
+```js
+// define map options
+const mapOptions = {
+  center: [51.507842896935315, -0.11123930420231712], // center the map on the coordinates for London
+  zoom: 14,
+  minZoom: 10,
+  maxZoom: 16,
+};
+
+// define the map with the options above
+const map = L.map("map", mapOptions);
+```
+
+defines the map options, such as the initial, maximum, and minimum zoom settings, as well as the central coordinates of the map. These options are then added to a Leaflet method 'L.map()' that instantiates our map and defines it with a constant for future reference in our code.
+
+```js
+// add a base map to the map
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  minZoom: 10,
+  maxZoom: 16,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
+```
+
+The code above adds the open street map base tiles to our map, while the following code...
+
+```js
+// Overlay layers (TMS)
+const london1889 = L.tileLayer('tiles/{z}/{x}/{y}.png', {
+  tms: true,
+  minZoom: 10,
+  maxZoom: 16,
+}).addTo(map);
+
+// Give overlay layers (london1889) a title for the opacity control
+const overMap = {
+  "London, 1889": london1889
+};
+
+// The opacity control
+L.control.opacity(
+  overMap, {
+    label: "<b>Map Transparency</b>" // Give the control a title
+  }
+).addTo(map);
+```
+
+adds the tiles for Booth's 1889 map of London poverty as an overlay, feeds them to the opacity control, and adds this control to the map.
+
+Next, there is some code adding a scale bar to the map, followed by...
+
+```js
+// use jquery to load GeoJSON data
+$.when(
+  $.getJSON('data/sherlock_points.geojson')
+  // when the files are done loading,
+  // identify them with names and process them through a function
+).done(function(sherlockPts) {});
+```
+
+which gets ready to perform a function on the Sherlock points after it loads the GeoJSON file containing them. Inside this function, is the following large block of code:
+
+```js
+// initiate a leaflet GeoJSON layer with L.geoJson, feed it the Sherlock data, and add to the map
+const sholmes = L.geoJson(sherlockPts, {
+  pointToLayer: function(feature, latlng) {
+    var tags = []; // declare an empty array for filter tags
+    tags.push(feature.properties.story); // push story name from the GeoJSON feature properties to tags array
+    return L.marker(latlng, {
+      tags: tags,
+      icon: L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      })
+    });
+  },
+  // for each feature...
+  onEachFeature: function(feature, layer) {
+
+    // declare an empty string variable
+    var ptLocation = "";
+
+    // if the location is present...
+    if (layer.feature.properties.location != null) {
+      // define ptLocation as...
+      var ptLocation = "<br>" + layer.feature.properties.location;
+      // otherwise...
+    } else {
+      // make sure it remains an empty string
+      var ptLocation = "";
+    };
+
+    let popUp = (layer.feature.properties.place + ptLocation + "<br>Story: " + layer.feature.properties.story + "<br><hr>" + layer.feature.properties.info);
+
+    layer.bindPopup(popUp);
+    layer.on('mouseover', function(e) {
+      this.openPopup();
+      e.target.setIcon(new L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      }));
+    });
+    layer.on('mouseout', function(e) {
+      this.closePopup();
+      this.setIcon(L.icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      }));
+    });
+  }
+}).addTo(map);
+```
+
+This code defines a layer with "const sholmes = L.geoJson(...)" and then builds this layer with blue png marker icons. It also pushes the values in the "story" column into an empty array defined as "tags" so that we can then append these to the markers and use them to filter the markers with the filter control. Next, the code defines the popup content, using the "location", "place", "story", and "info" columns. It tells the layer to open the popup and change the icon to a yellow marker when it detects a mouseover event. It also tells the layer to close the popup and change the icon back to a blue marker when it detects that the user has moved the mouse off the marker. The code then adds this layer to the map.
+
+Finally, the following code...
+
+```js
+// add a tag filter button to the map with all of the Sherlock Holmes story titles
+L.control.tagFilterButton({
+  data: ["A Case of Identity", "A Scandal in Bohemia", "A Study in Scarlet", "His Last Bow", "Multiple", "Other", "The Adventure of Charles Augustus Milverton", "The Adventure of Lady Frances Carfax",
+    "The Adventure of Shoscombe Old Place", "The Adventure of the Beryl Coronet", "The Adventure of the Blanched Soldier", "The Adventure of the Blue Carbuncle", "The Adventure of the Bruce-Partington Plans",
+    "The Adventure of the Cardboard Box", "The Adventure of the Copper Beeches", "The Adventure of the Creeping Man", "The Adventure of the Dancing Men", "The Adventure of the Devil's Foot", "The Adventure of the Dying Detective",
+    "The Adventure of the Empty House", "The Adventure of the Engineer's Thumb", "The Adventure of the Golden Pince-Nez", "The Adventure of the Greek Interpreter", "The Adventure of the Illustrious Client",
+    "The Adventure of the Mazarin Stone", "The Adventure of the Missing Three-Quarter", "The Adventure of the Musgrave Ritual", "The Adventure of the Naval Treaty", "The Adventure of the Noble Bachelor",
+    "The Adventure of the Norwood Builder", "The Adventure of the Priory School", "The Adventure of the Red Circle", "The Adventure of the Resident Patient", "The Adventure of the Retired Colourman",
+    "The Adventure of the Second Stain", "The Adventure of the Six Napoleons", "The Adventure of the Solitary Cyclist", "The Adventure of the Speckled Band", "The Adventure of the Stock-Broker's Clerk",
+    "The Adventure of the Sussex Vampire", "The Adventure of the Three Gables", "The Adventure of the Three Garridebs", "The Adventure of the Veiled Lodger", "The Adventure of the Yellow Face", "The Adventure of Wisteria Lodge",
+    "The Final Problem", "The Five Orange Pips", "The Hound of the Baskervilles", "The Illustrious Client", "The Man with the Twisted Lip", "The Musgrave Ritual", "The Problem of Thor Bridge", "The Red-Headed League",
+    "The Sign of the Four", "The Valley of Fear"
+  ],
+  filterOnEveryClick: true,
+  icon: '<img style="font-size:18px; padding-top: 6px;" src="icon/filter.png">'
+}).addTo(map);
+```
+
+instantiates a filter control and provides all of the Sherlock Holmes stories in the "data" array. Then, it adds this control to our map.
