@@ -399,9 +399,9 @@ L.control.tagFilterButton({
 instantiates a filter control and provides all of the Sherlock Holmes stories in the "data" array. Then, it adds this control to our map.
 
 ## Week 8: Questions for Discussion
-1. What are some shortcomings of this web map? Is it useful? Is it interesting? Why or why not? How could it be improved?
+1. Looking at Charles Booth's map of London poverty, what are your critical impressions? What might have been some of its uses and consequences (both idealistically and problematically)? What might it say about the mapmaker and his intended audience?
 
-2. Looking at Charles Booth's map of London poverty, what are your critical impressions? What might have been some of its uses and consequences (both idealistically and problematically)? What might it say about the mapmaker and his intended audience?
+2. What are some shortcomings of this web map? Is it useful? Is it interesting? Why or why not? How could it be improved?
 
 4. By comparing the clustering of noteworthy events from the Sherlock Holmes series with Booth's map of London, what deductions might we make about Sherlock Holmes and the author, Sir Arthur Conan Doyle? What critique could be leveled against Booth's perspective from this mapping of the Adventures of Sherlock Holmes?
 
