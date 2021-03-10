@@ -6,8 +6,9 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
 - [Week 8: Basic Tech and Techniques for Digital Cartography](#week-8-basic-tech-and-techniques-for-digital-cartography)
   - [Download QGIS Desktop Software](#download-qgis-desktop-software)
   - [Download Atom Text Editor](#download-atom-text-editor)
+  - [Download This Repository](#download-this-repository)
 - [Static Mapping with QGIS](#static-mapping-with-qgis)
-  - [Step 1: Download This Repository and Upload the Sherlock CSV to QGIS](#step-1-download-this-repository-and-upload-the-sherlock-csv-to-qgis)
+  - [Step 1: Upload the Sherlock CSV to QGIS](#step-1-download-this-repository-and-upload-the-sherlock-csv-to-qgis)
   - [Step 2: Adding a Base Map](#step-2-adding-a-base-map)
   - [Step 3: Changing Projections](#step-3-changing-projections)
   - [Step 4: Adding a Georeferenced Historic Base Map](#step-4-adding-a-georeferenced-historic-base-map)
@@ -49,9 +50,7 @@ A good text editor is a must for any code-intensive web cartography. Atom descri
 
 Building a web map from scratch requires some familiarity with coding in HTML, CSS, and JavaScript. In this class, we will take a look at what these are doing to make our web map work, but you will not be expected to write or implement any code. If you are interested in taking a deeper dive into this, let me know and I can point you in the direction of some good classes or work through the basics with you.
 
-## Static Mapping with QGIS
-
-### Step 1: Download this Repository and Upload the Sherlock CSV to QGIS
+### Download This Repository
 Before opening QGIS, you should download this repository and save it to your desktop so that you can work with the files included here. Towards the top of this page, you should see a green button that says, "Code." Click this and select "Download ZIP" from the options as shown in the image below.
 
 ![Downloading Repo](images/Repo-download.png)  
@@ -61,6 +60,9 @@ Unzip this folder and save it to your desktop. Within this folder, you will find
 
 Every map is essentially a chart with X and Y axes (you may also see Z for elevation). Think of a map oriented with the top of the sheet at north. As the X axis moves from left to right, the X column stores longitude data (degrees east or west of Greenwich, England). As the Y axis moves from bottom to top, this column stores the latitude information (degrees north or south of the Equator). Close the csv file and open QGIS.
 
+## Static Mapping with QGIS
+
+### Step 1: Upload the Sherlock CSV to QGIS
 Upon opening QGIS, you should notice a dropdown option called "Layer" in the bar at the top of your screen. Click this and select "Add Layer." Then select "Add Delimited Text Layer" from the options provided.
 
 ![Adding Spreadsheet Data to QGIS](images/Upload-csv-1.png)  
