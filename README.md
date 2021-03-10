@@ -399,4 +399,12 @@ instantiates a filter control and provides all of the Sherlock Holmes stories in
 
 2. Looking at Charles Booth's map of London poverty, what are your critical impressions? What might have been some of its uses and consequences (both idealistically and problematically)? What might it say about the mapmaker and his intended audience?
 
+3. How could you see a researcher using Booth's map, along with some of the interactive web map techniques shown here or elsewhere, to make an argument in your academic field of study?
+
 ## Week 8: Homework
+
+1. Crowdsourced web mapping activity (check back soon)
+
+2. Read [Harley, J. B. 1989 Deconstructing the Map](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Harley-Deconstructing-the-Map.pdf) and [Crampton and Krygier 2006 An Introduction to Critical Cartography](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Crampton%26Krygier_An_introduction_to_Critical_Carography.pdf)
+
+3. Consider the following: (check back soon)
