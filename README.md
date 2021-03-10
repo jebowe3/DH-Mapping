@@ -20,6 +20,7 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
   - [Step 2: Download Atom-Live-Server Package](#step-2-download-atom-live-server-package)
   - [Step 3: Add the Sherlock GeoJSON to a Web Map Using Atom](#step-3-add-the-sherlock-geojson-to-a-web-map-using-atom)
   - [Step 4: Explanation of the Code Behind the Web Map](#step-4-explanation-of-the-code-behind-the-web-map)
+  - [Step 5: Crowdsourced Web Mapping with Google Sheets](#step-5-crowdsourced-web-mapping-with-google-sheets)
 - [Week 8: Questions for Discussion](#week-8-questions-for-discussion)
 - [Week 8: Homework](#week-8-homework)
 
@@ -398,6 +399,16 @@ L.control.tagFilterButton({
 
 instantiates a filter control and provides all of the Sherlock Holmes stories in the "data" array. Then, it adds this control to our map.
 
+### Step 5: Crowdsourced Web Mapping with Google Sheets
+With a few slight changes to our index.html code and a JavaScript library called PapaParse, we can parse a Google Sheet directly and add this content to map markers. Within the repository you downloaded, there is another [html file](https://github.com/jebowe3/DH-Mapping/blob/main/leaflet-map/googlesheet-index.html) at 'leaflet-map/googlesheet-index.html' that makes markers and popup content from our shared [Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1CT3wnuXk0dObZgLyOgnZZmh_av5Sm2nWlRByVxVkr9k/edit#gid=0).
+
+In Atom, open the googlesheet-index.html file. Run atom-live-server and append '/googlesheet-index.html' to the url. You should see a similar map load in your browser, with one important distinction. Notice how the first entry in our Google Sheets document contains an image link in a column titled "images." If you go back to the map in atom-live-server, filter for The Five Orange Pips in the story filter and click on the marker in the city center for Lloyd's Register, you will notice that this popup contains the image from that web link.
+
+![Popup with Image](images/popup-with-image.png)  
+**Figure 29**. A popup with an image.
+
+While you could imagine more compelling information to crowdsource into a web map, I would like you to experiment with crowdsourced mapping by finding open source images on the web (Wikipedia and Wikimedia Commons are two good sources) for at least five points in our shared Google Spreadsheet. Please add these links to the "images" column in the appropriate row on the spreadsheet before our next class.
+
 ## Week 8: Questions for Discussion
 1. Looking at Charles Booth's map of London poverty, what are your critical impressions? What might have been some of its uses and consequences (both idealistically and problematically)? What might it say about the mapmaker and his intended audience?
 
@@ -409,7 +420,7 @@ instantiates a filter control and provides all of the Sherlock Holmes stories in
 
 ## Week 8: Homework
 
-1. Crowdsourced web mapping activity (check back soon)
+1. Crowdsourced web mapping activity. Find images for five points on the [Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1CT3wnuXk0dObZgLyOgnZZmh_av5Sm2nWlRByVxVkr9k/edit#gid=0) and add the links to the "images" column.
 
 2. Read [Harley, J. B. 1989 Deconstructing the Map](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Harley-Deconstructing-the-Map.pdf) and [Crampton and Krygier 2006 An Introduction to Critical Cartography](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Crampton%26Krygier_An_introduction_to_Critical_Carography.pdf)
 
