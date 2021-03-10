@@ -399,6 +399,8 @@ instantiates a filter control and provides all of the Sherlock Holmes stories in
 
 2. Looking at Charles Booth's map of London poverty, what are your critical impressions? What might have been some of its uses and consequences (both idealistically and problematically)? What might it say about the mapmaker and his intended audience?
 
+4. By comparing the clustering of noteworthy events from the Sherlock Holmes series with Booth's map of London, what deductions might we make about Sherlock Holmes and the author, Sir Arthur Conan Doyle? What critique could be leveled against Booth's perspective from this mapping of the Adventures of Sherlock Holmes?
+
 3. How could you see a researcher using Booth's map, along with some of the interactive web map techniques shown here or elsewhere, to make an argument in your academic field of study?
 
 ## Week 8: Homework
