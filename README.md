@@ -8,7 +8,7 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
   - [Download Atom Text Editor](#download-atom-text-editor)
   - [Download This Repository](#download-this-repository)
 - [Static Mapping with QGIS](#static-mapping-with-qgis)
-  - [Step 1: Upload the Sherlock CSV to QGIS](#step-1-download-this-repository-and-upload-the-sherlock-csv-to-qgis)
+  - [Step 1: Upload the Sherlock CSV to QGIS](#step-1-upload-the-sherlock-csv-to-qgis)
   - [Step 2: Adding a Base Map](#step-2-adding-a-base-map)
   - [Step 3: Changing Projections](#step-3-changing-projections)
   - [Step 4: Adding a Georeferenced Historic Base Map](#step-4-adding-a-georeferenced-historic-base-map)
