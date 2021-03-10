@@ -19,6 +19,8 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
   - [Step 2: Download Atom-Live-Server Package](#step-2-download-atom-live-server-package)
   - [Step 3: Add the Sherlock GeoJSON to a Web Map Using Atom](#step-3-add-the-sherlock-geojson-to-a-web-map-using-atom)
   - [Step 4: Explanation of the Code Behind the Web Map](#step-4-explanation-of-the-code-behind-the-web-map)
+- [Week 8: Questions for Discussion](#week-8-questions-for-discussion)
+- [Week 8: Homework](#week-8-homework)
 
 ## Week 8: Basic Tech and Techniques for Digital Cartography
 Note: Before class, please download QGIS and Atom, as discussed below.
@@ -84,7 +86,7 @@ Things look good, but if you look at maps for a living, this map looks a little 
  GIS users are trained to think of mappable data in two main categories - vector and raster. Vector data consist of distinct points, lines, and polygons. The spreadsheet data that you have mapped is one example of vector data. In contrast, raster data consist of continuous pixels. A scanned map is an example of raster data. We are now going to add some new raster data to our map.
 
 ### Step 4: Adding a Georeferenced Historic Base Map
-Adding an historic base map to your project is a nice way to give your map historical context. Using GIS software, you can take any scanned map and "rubber sheet" it to your project in a painstaking process known as georeferencing. Essentially, this is a process of placing a series of pins on your scanned map and linking them to a series of matching pins in your map edit window. After you have done this, you can run a tool in GIS to assign coordinates to each pixel on your scanned map. Luckily, there are several online resources, like the [David Rumsey Map Collection](https://www.davidrumsey.com/), that provide scanned maps that are already georeferenced. I have downloaded and placed one of these maps in the "booth-poverty-map" folder.
+Adding an historic base map to your project is a nice way to give your map historical context. Using GIS software, you can take any scanned map and "rubber sheet" it to your project in a painstaking process known as georeferencing. Essentially, this is a process of placing a series of pins on your scanned map and linking them to a series of matching pins in your map edit window. After you have done this, you can run a tool in GIS to assign coordinates to each pixel on your scanned map. Luckily, there are several online resources, like the [David Rumsey Map Collection](https://www.davidrumsey.com/), that provide scanned maps that are already georeferenced. I have downloaded and placed one of these maps in the "booth-poverty-map" folder. ** ADDENDUM: As this file was quite large, it seems that it may not be downloadable from GitHub. Instead, please navigate to the [shared document in our Google Drive folder](https://drive.google.com/file/d/1udpezkj1y-DIg0kjHLqfcI1swIwLTrwe/view?usp=sharing) and download the tif file from there. Please replace the tif file in the "booth-poverty-map" folder with this one and continue as described below. **
 
 Similar to how you added the csv data, click "Layer" in the bar at the top of the screen. Then, click "Add Layer" and "Add Raster Layer." This will open a form.
 
@@ -391,3 +393,10 @@ L.control.tagFilterButton({
 ```
 
 instantiates a filter control and provides all of the Sherlock Holmes stories in the "data" array. Then, it adds this control to our map.
+
+## Week 8: Questions for Discussion
+1. What are some shortcomings of this web map? Is it useful? Is it interesting? Why or why not? How could it be improved?
+
+2. Looking at Charles Booth's map of London poverty, what are your critical impressions? What might have been some of its uses and consequences (both idealistically and problematically)? What might it say about the mapmaker and his intended audience?
+
+## Week 8: Homework
