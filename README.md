@@ -422,6 +422,27 @@ While you could imagine more compelling information to crowdsource into a web ma
 
 1. Crowdsourced web mapping activity. Find images for five points on the [Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1CT3wnuXk0dObZgLyOgnZZmh_av5Sm2nWlRByVxVkr9k/edit#gid=0) and add the links to the "images" column.
 
-2. Read [Harley, J. B. 1989 Deconstructing the Map](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Harley-Deconstructing-the-Map.pdf) and [Crampton and Krygier 2006 An Introduction to Critical Cartography](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Crampton%26Krygier_An_introduction_to_Critical_Carography.pdf)
+2. Read [Harley, J. B. 1989 Deconstructing the Map](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Harley-Deconstructing-the-Map.pdf), [Thatcher et al. 2016 Revisiting Critical GIS](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Revisiting-Critical-GIS.pdf), and [Monmonier 2016 Critique of Critical Cartography](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Monmonier_Critique_of_Critical_Cartography.pdf).
 
-3. Consider the following: (check back soon)
+3. Consider the following: 
+
+On J.B. Harley's "Deconstructing the Map":
+
+In what ways does Harley question the science and objectivity of cartography and maps? Think carefully about his examination of the rules of cartography, cartography as rhetoric, and maps as a discipline both responding to and generating power.
+Where do you find yourself agreeing or disagreeing with Harley's argument and why?
+
+On "Revisiting Critical GIS" by Thatcher et al.:
+
+Why are the authors reticent to define critical GIS?
+What is meant by the "critical" in critical quantification and critical GIS? Does this component serve or hinder the objectives of critical GIS?
+
+
+On "Critique of Critical Cartography" by Monmonier:
+
+
+What is Monmonier's main complaint against critical cartography and why does he hold this view?
+
+
+Overall:
+
+Pose one question for class discussion regarding either or both of the readings.
