@@ -424,9 +424,7 @@ While you could imagine more compelling information to crowdsource into a web ma
 
 2. Read [Harley, J. B. 1989 Deconstructing the Map](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Harley-Deconstructing-the-Map.pdf), [Thatcher et al. 2016 Revisiting Critical GIS](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Revisiting-Critical-GIS.pdf), and [Monmonier 2016 Critique of Critical Cartography](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Monmonier_Critique_of_Critical_Cartography.pdf).
 
-3. Consider the following: 
-
-On J.B. Harley's "Deconstructing the Map":
+3. Consider the following: On J.B. Harley's "Deconstructing the Map":
 
 In what ways does Harley question the science and objectivity of cartography and maps? Think carefully about his examination of the rules of cartography, cartography as rhetoric, and maps as a discipline both responding to and generating power.
 Where do you find yourself agreeing or disagreeing with Harley's argument and why?
