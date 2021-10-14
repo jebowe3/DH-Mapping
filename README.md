@@ -424,23 +424,25 @@ While you could imagine more compelling information to crowdsource into a web ma
 
 2. Read [Harley, J. B. 1989 Deconstructing the Map](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Harley-Deconstructing-the-Map.pdf), [Thatcher et al. 2016 Revisiting Critical GIS](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Revisiting-Critical-GIS.pdf), and [Monmonier 2016 Critique of Critical Cartography](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Monmonier_Critique_of_Critical_Cartography.pdf).
 
-3. Consider the following: On J.B. Harley's "Deconstructing the Map":
+3. Consider the following: 
 
-In what ways does Harley question the science and objectivity of cartography and maps? Think carefully about his examination of the rules of cartography, cartography as rhetoric, and maps as a discipline both responding to and generating power.
-Where do you find yourself agreeing or disagreeing with Harley's argument and why?
+    On J.B. Harley's "Deconstructing the Map":
 
-On "Revisiting Critical GIS" by Thatcher et al.:
+    In what ways does Harley question the science and objectivity of cartography and maps? Think carefully about his examination of the rules of cartography, cartography as rhetoric, and maps as a discipline both responding to and generating power.
+    Where do you find yourself agreeing or disagreeing with Harley's argument and why?
 
-Why are the authors reticent to define critical GIS?
-What is meant by the "critical" in critical quantification and critical GIS? Does this component serve or hinder the objectives of critical GIS?
+    On "Revisiting Critical GIS" by Thatcher et al.:
 
-
-On "Critique of Critical Cartography" by Monmonier:
-
-
-What is Monmonier's main complaint against critical cartography and why does he hold this view?
+    Why are the authors reticent to define critical GIS?
+    What is meant by the "critical" in critical quantification and critical GIS? Does this component serve or hinder the objectives of critical GIS?
 
 
-Overall:
+    On "Critique of Critical Cartography" by Monmonier:
 
-Pose one question for class discussion regarding either or both of the readings.
+
+    What is Monmonier's main complaint against critical cartography and why does he hold this view?
+
+
+    Overall:
+
+    Pose one question for class discussion regarding either or both of the readings.
