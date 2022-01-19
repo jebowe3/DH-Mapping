@@ -1,5 +1,5 @@
 # Digital Humanities Theory and Practice
-Weeks 8 and 9: Digital Cartography Theory and Practice
+Weeks 8 and 9: Digital Cartography
 
 ## Contents
 
@@ -23,6 +23,15 @@ Weeks 8 and 9: Digital Cartography Theory and Practice
   - [Step 5: Crowdsourced Web Mapping with Google Sheets](#step-5-crowdsourced-web-mapping-with-google-sheets)
 - [Week 8: Questions for Discussion](#week-8-questions-for-discussion)
 - [Week 8: Homework](#week-8-homework)
+- [Week 9: Text Analysis, Geolocation, and Network Mapping with Python, QGIS, and Gephi](#week-9-text-analysis-geolocation-and-network-mapping-with-python-qgis-and-gephi)
+  - [Download Anaconda Navigator](#download-anaconda-navigator)
+  - [Download Gephi](#download-gephi)
+- [Text Analysis with Python](#text-analysis-with-python)
+  - [Step 1: Configure an Anaconda Environment](#step-1-configure-an-anaconda-environment)
+  - [Step 2: Install Jupyter Notebook in the Environment](#step-2-install-jupyter-notebook-in-the-environment)
+  - [Step 3: Open the ipynb File in Jupyter Notebook](#step-3-open-the-ipynb-file-in-jupyter-notebook)
+  - [Step 4: Map Locations in The Adventures of Sherlock Holmes with QGIS](#step-4-map-locations-in-the-adventures-of-sherlock-holmes-with-qgis)
+  - [Step 5: Map a Network of Word Associations from The Adventures of Sherlock Holmes with Gephi](#step-5-map-a-network-of-word-associations-from-the-adventures-of-sherlock-holmes-with-gephi)
 
 ## Week 8: Basic Tech and Techniques for Digital Cartography
 Note: Before class, please download QGIS and Atom, as discussed below.
@@ -410,11 +419,9 @@ In Atom, open the googlesheet-index.html file. Run atom-live-server and append '
 While you could imagine more compelling information to crowdsource into a web map, I would like you to experiment with crowdsourced mapping by finding open source images on the web (Wikipedia and Wikimedia Commons are two good sources) for at least five points in our shared Google Spreadsheet. Please add these links to the "images" column in the appropriate row on the spreadsheet before our next class.
 
 ## Week 8: Questions for Discussion
-1. Looking at Charles Booth's map of London poverty, what are your critical impressions? What might have been some of its uses and consequences (both idealistically and problematically)? What might it say about the mapmaker and his intended audience?
+1. What are some shortcomings of this web map? Is it useful? Is it interesting? Why or why not? How could it be improved?
 
-2. What are some shortcomings of this web map? Is it useful? Is it interesting? Why or why not? How could it be improved?
-
-4. By comparing the clustering of noteworthy events from the Sherlock Holmes series with Booth's map of London, what deductions might we make about Sherlock Holmes and the author, Sir Arthur Conan Doyle? What critique could be leveled against Booth's perspective from this mapping of the Adventures of Sherlock Holmes?
+2. By comparing the clustering of noteworthy events from the Sherlock Holmes series with Booth's map of London, what deductions might we make about Sherlock Holmes and the author, Sir Arthur Conan Doyle? What critique could be leveled against Booth's perspective from this mapping of the Adventures of Sherlock Holmes?
 
 3. How could you see a researcher using Booth's map, along with some of the interactive web map techniques shown here or elsewhere, to make an argument in your academic field of study?
 
@@ -422,27 +429,171 @@ While you could imagine more compelling information to crowdsource into a web ma
 
 1. Crowdsourced web mapping activity. Find images for five points on the [Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1CT3wnuXk0dObZgLyOgnZZmh_av5Sm2nWlRByVxVkr9k/edit#gid=0) and add the links to the "images" column.
 
-2. Read [Harley, J. B. 1989 Deconstructing the Map](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Harley-Deconstructing-the-Map.pdf), [Thatcher et al. 2016 Revisiting Critical GIS](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Revisiting-Critical-GIS.pdf), and [Monmonier 2016 Critique of Critical Cartography](https://github.com/jebowe3/DH-Mapping/blob/main/readings/Monmonier_Critique_of_Critical_Cartography.pdf).
+## Week 9: Text Analysis, Geolocation, and Network Mapping with Python, QGIS, and Gephi
+Note: Before class, please download Anaconda Navigator for implementing Python code in Jupyter Notebook. Also, please download Gephi for mapping networks.
 
-3. Consider the following: 
+This week, we will dive a bit deeper into the possible applications of digital mapping in the humanities. First, we will use some powerful Python modules, packages, and libraries that will read through the Adventures of Sherlock Holmes and measure the proximity of associated words in the text, as well as pull out all of the places mentioned in the stories. From this, we will experiment with mapping the frequency of mentioned places with QGIS, generating word clouds, and mapping networks between common words and their most similar partners in the text. These networks can tease out and visually represent thematic connections within the analyzed text, while our map of mentioned locations can elucidate the author's, or a character's, sense of place.
 
-    On J.B. Harley's "Deconstructing the Map":
+### Download Anaconda Navigator
+Click on the following [link](https://www.anaconda.com/products/individual) and click the "Download" button.
 
-    In what ways does Harley question the science and objectivity of cartography and maps? Think carefully about his examination of the rules of cartography, cartography as rhetoric, and maps as a discipline both responding to and generating power.
-    Where do you find yourself agreeing or disagreeing with Harley's argument and why?
+![Downloading Anaconda](images/anaconda-download.png)  
+**Figure 30**. Downloading Anaconda.
 
-    On "Revisiting Critical GIS" by Thatcher et al.:
+Installing Anaconda will give you access to Anaconda Navigator, wherein you can use Jupyter Notebook to open and run ipynb files.
 
-    Why are the authors reticent to define critical GIS?
-    What is meant by the "critical" in critical quantification and critical GIS? Does this component serve or hinder the objectives of critical GIS?
+### Download Gephi
 
+Now, click the following [link](https://gephi.org/users/download/) to download Gephi.
 
-    On "Critique of Critical Cartography" by Monmonier:
+![Downloading Gephi](images/gephi-download.png)
+**Figure 31**. Downloading Gephi.
 
+With Gephi, you can produce a wide range of visual analytics. We will be using Gephi to map networks between common words/themes in the Adventures of Sherlock Holmes.
 
-    What is Monmonier's main complaint against critical cartography and why does he hold this view?
+## Text Analysis with Python
 
+### Step 1: Configure an Anaconda Environment
 
-    Overall:
+Navigate to your applications folder and open Anaconda Navigator. On the lefthand side of the window, you should see an "Environments" tab. Click this. Next, locate the "Create" button at the bottom of the window and click. In the dialog box, name the new environment "advsherlock", select Python version 3.6, and click "Create".
 
-    Pose one question for class discussion regarding either or both of the readings.
+![Configuring an Anaconda Environment](images/config-env.png)
+**Figure 32**. Configuring an Anaconda Environment.
+
+### Step 2: Install Jupyter Notebook in the Environment
+
+On the lefthand side of the window, click the "Home" tab. Next to "Applications on" at the top, make sure to select the "advsherlock" environment. Now, find Jupyter Notebook and click "Install".
+
+![Installing Jupyter Notebook](images/install-jn.png)
+**Figure 33**. Installing Jupyter Notebook.
+
+After installation, click "Launch" under Jupyter Notebook. This will open Jupyter Notebook in your web browser, whereupon you will see all accessible folders on your computer.
+
+![Launch Jupyter Notebook](images/launch-jn.png)
+**Figure 34**. Launch Jupyter Notebook.
+
+### Step 3: Open the ipynb File in Jupyter Notebook
+
+In Jupyter Notebook navigate to Desktop > DH-Mapping > analysis > place-analysis.ipynb and click this file. Follow the steps listed in the opened file, making sure to read through the explanations. The Python code included in the ipynb file will do the following:
+
+1. Download and save a txt file containing The Adventures of Sherlock Holmes
+2. Make and save a Word2Vec model for text analysis
+3. Create and save a word cloud of the the top 50 important words in the text
+4. Create and save a word cloud of the the top 50 locations mentioned in the text
+5. Save a csv file of all mentioned locations along with frequency counts for each
+6. Save a revised csv file of cleaned and corrected locations along with frequency counts and coordinates for each
+7. Generate a gexf file for mapping networks between the 50 most common important words from the text and the twenty most similar words to each
+
+### Step 4: Map Locations in The Adventures of Sherlock Holmes with QGIS
+
+Notice that, in the "analysis" subdirectory of your project folder, you now have five new folders along with the initial "geojson" folder: "csv", "gephi", "model", "txt", and "wordcloud". These store all of the new files created when you ran the Python code in the ipynb file.
+
+For the purposes of mapping locations from the text, we are going to focus on the data in the "csv" and "geojson" folders. Using this data in QGIS, we will experiment with three different presentations of the locational frequency data to map Sherlock Holmes's sense of place: heat mapping, proportional circles, and point in polygon analysis using the "nations.geojson" file.
+
+First, open QGIS, choose Web > QuickMapServices > Search QMS (You may need to install the QuickMapServices Plugin first). Now, search for "Dark Matter" and add this tile service as your basemap.
+
+![Add Dark Matter Basemap](images/add-dm.png)
+**Figure 35**. Add Dark Matter Basemap.
+
+Second, add the "adv-sherlock-places-geocoded.csv" file as points. To do this, choose Layer > Add Layer > Add Delimited Text Layer. Then, a dialog box will open.
+
+![Add Delimited Text Layer - Step 1](images/add-dlt-layer-1.png)
+**Figure 36**. Add Delimited Text Layer - Step 1.
+
+In the dialog box, select the "adv-sherlock-places-geocoded.csv" file next to "File name". Next, under "Geometry Definition", choose "Point coordinates" and set "X field" as "lng" and "Y field" as "lat". Make sure that the "Geometry CRS" is EPSG:4326 and click "Add". You can see a completed dialog box below. After adding, you should see all the mentioned mappable locations from The Adventures of Sherlock Holmes plotted as points in the QGIS map window.
+
+![Add Delimited Text Layer - Step 2](images/add-dlt-layer-2.png)
+**Figure 37**. Add Delimited Text Layer - Step 2.
+
+Third, let's make these points appear as proportional circles. Find the layer in the "Layers" table of contents in the lower lefthand corner and right click. Select "Properties" and choose "Symbology" from the options at left. Instead of "Single symbol", choose "Graduated". For "Column", choose "frequency". For "Method", select "Size". Next to "Mode", choose "Natural Breaks (Jenks)" and click "Classify". Then, click "OK".
+
+![Make Proportional Circles](images/make-prop-circles.png)
+**Figure 38**. Make Proportional Circles.
+
+After doing that, your map window should like similar to the following image. If you like the results, you can proceed to the layout window and finalize a pdf for exporting.
+
+![Proportional Circles Map](images/prop-circs.png)
+**Figure 39**. Proportional Circles Map.
+
+Now, let's try a heat map! In you properties settings, choose "Heatmap" in place of "Graduated". Use "Reds" for the color ramp and set the radius and maximum values to 10. You can experiment with different values to see how they change the results at different zoom levels. For "Weight points by", choose "frequency" and then move the rendering quality bar to "Best". Finally, maximize the "Layer Rendering" dialog at the bottom, set the opacity to 33.3% and click "OK".
+
+![Making a Heat Map](images/heat-map-settings.png)
+**Figure 40**. Making a Heat Map.
+
+Returning to your map screen, you should see something like the image below. Again, if you like this, you can export a pdf in the layout window.
+
+![Heat Map](images/heat-map.png)
+**Figure 41**. Heat Map.
+
+Finally, let's do some point in polygon analysis. Our goal is to total the frequency values for all points located within each nation and color code the result in a choropleth map. To do this, first let's turn off the Dark Matter basemap. Next, drag and drop the "nations.geojson" file into the map window.
+
+Now, navigate to Processing > Toolbox and search for a tool called "Join attributes by location (summary)". In the dialog box, identify "nations" as the input layer and "adv-sherlock-places-geocoded" as the join layer. Select "contains" for the geometric predicate. Under "fields to summarize", select "frequency" and select "sum" under "summaries to calculate". Finally, click "Run". Use the image below for guidance.
+
+![Point in Polygon Settings](images/summary-settings.png)
+**Figure 42**. Point in Polygon Settings.
+
+Next, in the Layers table of contents, turn off every layer except the new "Joined layer". Right click this layer and choose "Open Attribute Table". Click the "Open field calculator" button. Check "Update existing field" and choose "frequence_sum" from the dropdown menu. In the expression box, type:
+
+if ("frequency_sum" is null, 0, "frequency_sum")
+
+Click "OK". Next, click save edits and close the edit session by clicking the box that contains a pencil.
+
+Now, close the attribute table and right click the joined layer once again. This time, select "Properties". From the dropdown menu options, choose "Graduated". Then, select "frequency_sum" for the column to be analyzed. Next, choose "Blues" for the color ramp. Next, select "Natural Breaks (Jenks)" for the mode of classification, click "Classify" and then click "OK". Your map should look similar to the image below, but you can certainly play around with some more appropriate global equal area projections before finalizing and exporting to a pdf.
+
+![Choropleth Frequency Map](images/world-choropleth.png)
+**Figure 43**. Choropleth Frequency Map.
+
+Looking at these three maps, what could you say about Sherlock's global sense of place? What might influence his familiarity with particular geographic locations, regions, and countries? How is it constricted and how is it broader than expected?
+
+### Step 5: Map a Network of Word Associations from The Adventures of Sherlock Holmes with Gephi
+
+Inside your "analysis" subdirectory, you should see a folder named "gephi". Inside this, you should also see a gexf file. We can load this in the Gephi software you downloaded earlier. With this file, we will perform a visual network analysis to map associations between our words of interest from the text and their most similar relatives previously identified by our Word2Vec model.
+
+Locate Gephi in your applications and open the software. Now, click "New Project". From the options in the top bar, choose File > Open and locate your adv-sherlock.gexf file in your project folder. Click "Open".
+
+![Open the gexf File](images/gephi-open-gexf.png)
+**Figure 44**. Open the gexf File.
+
+Choose a "Directed" Graph Type and select "Append to existing workspace". Click "OK".
+
+![Import Settings](images/gephi-import.png)
+**Figure 45**. Import Settings.
+
+Now, make sure you are in the "Overview" view. From the options at right, click "Run" next to "Modularity". In the settings, choose "Randomize" and "Use weights" and click "OK". You can close the resulting modularity report. This will classify our nodes cluster into new groups of closely associated words, called "communities".
+
+![Modularity Settings](images/gephi-modularity.png)
+**Figure 46**. Modularity Settings.
+
+Now, we will color code each node by its community. As shown below, under "Appearance", select Nodes > Partition > Modularity Class and click "Apply".
+
+![Appearance Settings](images/gephi-appearance.png)
+**Figure 47**. Appearance Settings.
+
+Next, we will rank each node proportionally. Again, under "Appearance", select Nodes > Ranking > Degree and click "Apply". Follow the steps shown below.
+
+![Node Ranking](images/gephi-node-ranking.png)
+**Figure 48**. Node Ranking.
+
+As you can see, this network is too crowded to be useful as a visualization. We need to change the layout of the network to avoid overlapping nodes and edges to improve legibility.
+
+Follow the image below. Under the "Layout" options, choose "ForceAtlas 2". Then, under "Behavior Alternatives", choose "Dissuade Hubs", "LinLog mode", and "Prevent Overlap". Finally, click "Run". When you click "Run", you will notice the network begin to change shape. You will also notice that the "Run" button has changed into a "Stop" button. As soon as you notice the changes to the layout slowing down, you can click "Stop" to freeze the network.
+
+![Changing the Layout Options](images/gephi-layout-options.png)
+**Figure 49**. Changing the Layout Options.
+
+Zoom out and you will notice that the network is much less tangled and dense. However, we still do not know which words are represented by these nodes.
+
+Click "Preview" from the options at the top of the window. Next, under "Preview Settings", change "Default" to "Text outline" and click "Refresh". The window should populate with a labelled network, as shown below.
+
+![Changing the Preview Settings](images/gephi-preview-settings-1.png)
+**Figure 50**. Changing the Preview Settings.
+
+Let's experiment with these settings some more to improve legibility. Under "Nodes", set the opacity to 0. Under "Node Labels", set font to Arial 18 Plain, color to parent, and outline size to 2. Under "Edges", select "Rescale weight" and set the minimum to 0.1 and the maximum to 4. Finally, click "Refresh". Try manipulating these settings until you are satisfied with the results.
+
+![Resetting the Preview Settings](images/gephi-reset-preview-settings.png)
+**Figure 51**. Resetting the Preview Settings.
+
+Finally, we can export a pdf. Notice that there is an export button at the very bottom of the preview settings. Click this and export a pdf to your gephi folder as shown in the image below.
+
+![Exporting a PDF](images/gephi-export-pdf.png)
+**Figure 52**. Exporting a PDF.
