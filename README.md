@@ -1,5 +1,13 @@
 # Digital Humanities Theory and Practice
+Jay Bowen, Digital Scholarship and Publishing Studio, University of Iowa Libraries
 Weeks 8 and 9: Digital Cartography
+
+## Credits
+- [The London of Sherlock Holmes](https://www.google.com/maps/d/viewer?ll=51.510345653313024%2C-0.12769532132744787&z=14&mid=11hi6OwDoifyUI4kFsg7suBQm1t8), by Thomas Bruce Wheeler
+- [Descriptive Map of London Poverty 1889](https://davidrumsey.georeferencer.com/maps/b0af04e4-993d-52da-b642-1051e9877e7f/), from the David Rumsey Map Collection
+- [Place context analysis using Natural Language Processing](https://github.com/jakobzhao/geog595/tree/master/06_ai), Bo Zhao
+- [Word2Vec](https://github.com/sankyfox/word2vec), Sankalp Kolhe
+- [Google News and Leo Tolstoy: Visualizing Word2Vec Word Embeddings using t-SNE](https://towardsdatascience.com/google-news-and-leo-tolstoy-visualizing-word2vec-word-embeddings-with-t-sne-11558d8bd4d), Sergey Smetanin
 
 ## Contents
 
