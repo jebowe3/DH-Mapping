@@ -29,8 +29,6 @@ Weeks 8 and 9: Digital Cartography
   - [Step 3: Add the Sherlock GeoJSON to a Web Map Using Atom](#step-3-add-the-sherlock-geojson-to-a-web-map-using-atom)
   - [Step 4: Explanation of the Code Behind the Web Map](#step-4-explanation-of-the-code-behind-the-web-map)
   - [Step 5: Crowdsourced Web Mapping with Google Sheets](#step-5-crowdsourced-web-mapping-with-google-sheets)
-- [Week 8: Questions for Discussion](#week-8-questions-for-discussion)
-- [Week 8: Homework](#week-8-homework)
 - [Week 9: Text Analysis, Geolocation, and Network Mapping with Python, QGIS, and Gephi](#week-9-text-analysis-geolocation-and-network-mapping-with-python-qgis-and-gephi)
   - [Download Gephi](#download-gephi)
 - [Text Analysis with Python](#text-analysis-with-python)
