@@ -207,10 +207,10 @@ Return to the map edit window and right click the layer with all of the points (
 **Figure 24**. Export all of the Sherlock points.
 
 ### Step 2: Download Visual Studio Code
-Now we are ready to open our "leaflet-map" folder and do some minor editing in Visual Studio Code. Open the repository that you downloaded to your desktop. Locate the folder called "leaflet-map." Drag and drop this entire folder over the green Atom icon on your desktop. This should open all of the web map components within an Atom text edit session. In the bar at the left, open the file called "index.html" so that you can see all of the code behind the web map. Your screen should look like this:
+Now we are ready to open our "leaflet-map" folder and do some minor editing in Visual Studio Code. Open the repository that you downloaded to your desktop. Locate the folder called "leaflet-map." Drag and drop this entire folder over the blue Visual Studio Code icon on your desktop. This should open all of the web map components within a Visual Studio Code edit session. In the bar at the left, open the file called "index.html" so that you can see all of the code behind the web map. Your screen should look like this:
 
-![Editing in Atom](images/index-html-atom.png)  
-**Figure 25**. Editing in Atom.
+![Editing in Visual Studio Code](images/index-html-vs-code.PNG)  
+**Figure 25**. Editing in Visual Studio Code.
 
 The first thing that you will want to do so that you can check your progress is to download an Atom package called "atom-live-server." From the option in the bar at the top, click "Atom" and "Preferences." From the options that appear on the left, choose "Install," type "atom-live-server" in the search bar, and click "Install" on the first result. On my screen in the example below, you will see "Uninstall" because I have already installed this package.
 
