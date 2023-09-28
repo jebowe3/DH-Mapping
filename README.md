@@ -217,10 +217,10 @@ The first thing that you will want to do so that you can check your progress is 
 ![Installing Live Server](images/install-live-server.PNG)  
 **Figure 26**. Installing Live Server.
 
-Now you can check the progress of edits to your web map with a locally hosted server. To test it out, click "Packages" from the options in the bar at the top. Select "atom-live-server" and "Start server." This will open the map in your web browser.
+Now you can check the progress of edits to your web map with a locally hosted server. To test it out, with the index.html file open, click "Go Live" in the right corner inside the blue bar at the bottom of the Visual Studio Code window. You may also need to click on the "leaflet-map" folder if you are presented with a menu. This will open the map in your web browser.
 
 ![Initial Live Server Map](images/live-server-init-map.png)  
-**Figure 27**. The initial web map in atom-live-server.
+**Figure 27**. The initial web map in Live Server.
 
 The map should look like the image above. You will notice that one interactive feature is already on the map. In the top right corner, there is a slider control that changes the opacity value of the historic base map tiles so that you can see the contemporary map of London underneath. Already, we can see how the web map offers a little more to the experience of the map user.
 
@@ -247,10 +247,10 @@ $.when(
 ).done(function(sherlockPts) {
 ```
 
-Now, save your edits to the index.html file and refresh your web map in atom-live-server. You should notice a lot of blue markers now appear. Hover over them and you will see detailed descriptions of each points. Also notice that there is a filter button under the zoom control in the top left corner. If you click on this, you will see that you can filter the points by story name.
+Now, save your edits to the index.html file and refresh your web map in Live Server. You should notice a lot of blue markers now appear. Hover over them and you will see detailed descriptions of each points. Also notice that there is a filter button under the zoom control in the top left corner. If you click on this, you will see that you can filter the points by story name.
 
 ![Finished Live Server Map](images/web-map-finished.png)  
-**Figure 28**. The finished web map in atom-live-server.
+**Figure 28**. The finished web map in Live Server.
 
 ### Step 4: Explanation of the Code Behind the Web Map
 You may be wondering what the all of this code in the index.html file is doing. If not, feel free to skip this section, but if so, the following describes the main components of this code.
@@ -412,9 +412,9 @@ instantiates a filter control and provides all of the Sherlock Holmes stories in
 ### Step 5: Crowdsourced Web Mapping with Google Sheets
 With a few slight changes to our index.html code and a JavaScript library called PapaParse, we can parse a Google Sheet directly and add this content to map markers. Within the repository you downloaded, there is another [html file](https://github.com/jebowe3/DH-Mapping/blob/main/leaflet-map/googlesheet-index.html) at 'leaflet-map/googlesheet-index.html' that generates markers and popup content from our shared [Google Sheets spreadsheet](https://docs.google.com/spreadsheets/d/1CT3wnuXk0dObZgLyOgnZZmh_av5Sm2nWlRByVxVkr9k/edit#gid=0).
 
-In Atom, open the googlesheet-index.html file and take a quick look at the code. We are going to point our browser to this html file instead of the index.html file we viewed previously.
+In Visual Studio Code, open the googlesheet-index.html file and take a quick look at the code. We are going to point our browser to this html file instead of the index.html file we viewed previously.
 
-This time, run atom-live-server again, but add '/googlesheet-index.html' to the url in the browser address bar. You should see a similar map load in your browser, with one important distinction. Notice how the first entry in our Google Sheets document contains an image link in a column titled "images." If you go back to the map in atom-live-server, filter for The Five Orange Pips in the story filter and click on the marker in the city center for Lloyd's Register, you will notice that this popup contains the image from that web link.
+This time, run Live Server again, but add '/googlesheet-index.html' to the url in the browser address bar. You should see a similar map load in your browser, with one important distinction. Notice how the first entry in our Google Sheets document contains an image link in a column titled "images." If you go back to the map in Live Server, filter for The Five Orange Pips in the story filter and click on the marker in the city center for Lloyd's Register, you will notice that this popup contains the image from that web link.
 
 ![Popup with Image](images/popup-with-image.png)  
 **Figure 29**. A popup with an image.
@@ -439,7 +439,7 @@ In the new tab, to the right of the image, you will see an option to "use this f
 ![Copy Image URL](images/image-url.png)  
 **Figure 33**. Copy the image url.
 
-Paste this link into the empty entry in the images column of the shared google spreadsheet. Return to your googlesheet-index.html in atom-live-server and make sure to refresh the page. Now, when you hover over the marker for the image you just entered, you should see your added image in the popup content (it may take a moment).
+Paste this link into the empty entry in the images column of the shared google spreadsheet. Return to your googlesheet-index.html in Live Server and make sure to refresh the page. Now, when you hover over the marker for the image you just entered, you should see your added image in the popup content (it may take a moment).
 
 ![Image Added](images/image-added.png)  
 **Figure 34**. Image added to popup.
