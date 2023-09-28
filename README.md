@@ -25,8 +25,8 @@ Weeks 8 and 9: Digital Cartography
   - [Step 7: How to Make a Static Map](#step-7-how-to-make-a-static-map)
 - [Web Mapping with Leaflet JavaScript](#web-mapping-with-leaflet-javascript)
   - [Step 1: Export a GeoJSON File for Web Mapping](#step-1-export-a-geojson-file-for-web-mapping)
-  - [Step 2: Download Atom-Live-Server Package](#step-2-download-atom-live-server-package)
-  - [Step 3: Add the Sherlock GeoJSON to a Web Map Using Atom](#step-3-add-the-sherlock-geojson-to-a-web-map-using-atom)
+  - [Step 2: Download Visual Studio Code](#step-2-download-visual-studio-code)
+  - [Step 3: Add the Sherlock GeoJSON to a Web Map Using Visual Studio Code](#step-3-add-the-sherlock-geojson-to-a-web-map-using-visual-studio-code)
   - [Step 4: Explanation of the Code Behind the Web Map](#step-4-explanation-of-the-code-behind-the-web-map)
   - [Step 5: Crowdsourced Web Mapping with Google Sheets](#step-5-crowdsourced-web-mapping-with-google-sheets)
 - [Week 9: Text Analysis, Geolocation, and Network Mapping with Python, QGIS, and Gephi](#week-9-text-analysis-geolocation-and-network-mapping-with-python-qgis-and-gephi)
@@ -206,7 +206,7 @@ Return to the map edit window and right click the layer with all of the points (
 ![Export Sherlock Points](images/export-sherlock-points.png)  
 **Figure 24**. Export all of the Sherlock points.
 
-### Step 2: Download Atom-Live-Server Package
+### Step 2: Download Visual Studio Code
 Now we are ready to open our "leaflet-map" folder and do some minor editing in Atom. Open the repository that you downloaded to your desktop. Locate the folder called "leaflet-map." Drag and drop this entire folder over the green Atom icon on your desktop. This should open all of the web map components within an Atom text edit session. In the bar at the left, open the file called "index.html" so that you can see all of the code behind the web map. Your screen should look like this:
 
 ![Editing in Atom](images/index-html-atom.png)  
@@ -224,7 +224,7 @@ Now you can check the progress of edits to your web map with a locally hosted se
 
 The map should look like the image above. You will notice that one interactive feature is already on the map. In the top right corner, there is a slider control that changes the opacity value of the historic base map tiles so that you can see the contemporary map of London underneath. Already, we can see how the web map offers a little more to the experience of the map user.
 
-### Step 3: Add the Sherlock GeoJSON to a Web Map Using Atom
+### Step 3: Add the Sherlock GeoJSON to a Web Map Using Visual Studio Code
 You'll notice that there are no points on the map. That is because we have not directed the JavaScript within the index.html file to the GeoJSON file holding the points. Remember that the local path to the Sherlock points is 'data/sherlock_points.geojson' and that we will need to add this path to the index.html file. Scroll through the index.html file until you see the following lines of JavaScript:
 
 ```js
