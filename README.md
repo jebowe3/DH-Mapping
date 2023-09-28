@@ -60,7 +60,7 @@ As their site explains, QGIS is "a free and open source geographic information s
 ### Download Visual Studio Code
 A good text editor is a must for any code-intensive web cartography. Visual Studio Code describes itself as "a free, lightweight and extensible code editor for building web, desktop, and mobile applications" and fits the bill. You can download it [here](https://code.visualstudio.com/) by clicking the download button as shown below.
 
-![Downloading Visual Studio Code](images/Visual-studio-download.png)  
+![Downloading Visual Studio Code](images/Visual-studio-download.PNG)  
 **Figure 02**. Download Visual Studio Code.
 
 Building a web map from scratch requires some familiarity with coding in HTML, CSS, and JavaScript. In this class, we will take a look at what these are doing to make our web map work, but you will not be expected to write or implement any code. If you are interested in taking a deeper dive into this, let me know and I can point you in the direction of some good classes or work through the basics with you.
