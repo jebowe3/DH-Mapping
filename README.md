@@ -212,10 +212,10 @@ Now we are ready to open our "leaflet-map" folder and do some minor editing in V
 ![Editing in Visual Studio Code](images/index-html-vs-code.PNG)  
 **Figure 25**. Editing in Visual Studio Code.
 
-The first thing that you will want to do so that you can check your progress is to download an Atom package called "atom-live-server." From the option in the bar at the top, click "Atom" and "Preferences." From the options that appear on the left, choose "Install," type "atom-live-server" in the search bar, and click "Install" on the first result. On my screen in the example below, you will see "Uninstall" because I have already installed this package.
+The first thing that you will want to do so that you can check your progress is to download an extension called "Live Server." Hover over the icons in the far-left bar in the bar, Find and click "Extensions." Search for "Live Server" and click "Install" on the first result.
 
-![Installing Atom-Live-Server](images/install-liveserver.png)  
-**Figure 26**. Installing atom-live-server.
+![Installing Live Server](images/install-live-server.PNG)  
+**Figure 26**. Installing Live Server.
 
 Now you can check the progress of edits to your web map with a locally hosted server. To test it out, click "Packages" from the options in the bar at the top. Select "atom-live-server" and "Start server." This will open the map in your web browser.
 
