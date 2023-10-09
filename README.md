@@ -123,7 +123,7 @@ After adding the georefenced raster, you should see Booth's 1889 map of London p
 **Figure 10**. The Booth map in QGIS.
 
 ### Step 5: How to Label Points and Change Symbology
-Looking at the map in progress, you will see a bunch of points over an old map of London. It is kind of neat to zoom in and out on this map, but the points don't really mean anything without some legible data attached to them. We should probably add some labels to these undifferentiated points.
+Looking at the map in progress, you will see a bunch of points over an old map of London. It is neat to zoom in and out on this map, but the points don't really mean anything without some legible data attached to them. We should probably add some labels to these undifferentiated points.
 
 First, right click over the points layer in the table of contents and select "Properties."
 
